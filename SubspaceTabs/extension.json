@@ -1,0 +1,52 @@
+{
+  "name": "SubspaceTabs",
+  "namemsg": "subspacetabs-extensionname",
+  "version": "1.0.0",
+  "author": "Clay Salvage",
+  "url": "https://meta.wongery.org/wiki/Extension:SubspaceTabs",
+  "descriptionmsg": "subspacetabs-desc",
+  "license-name": "GPL-2.0-or-later",
+  "type": "other",
+  "manifest_version": 2,
+  "requires": {
+    "MediaWiki": ">= 1.38.0"
+  },
+  "AutoloadNamespaces": {
+    "MediaWiki\\Extension\\SubspaceTabs\\": "src/"
+  },
+  "HookHandlers": {
+    "SubspaceTabsHookHandler": {
+      "class": "MediaWiki\\Extension\\SubspaceTabs\\SubspaceTabsHookHandler"
+    }
+  },
+  "Hooks": {
+    "SkinTemplateNavigation::Universal": "SubspaceTabsHookHandler"
+  },
+  "ResourceModules": {
+    "ext.subspace": {
+      "localBasePath": "modules/ext.subspacetabs",
+      "remoteExtPath": "SubspaceTabs/modules/ext.subspacetabs",
+      "dependencies": [],
+      "styles": [],
+      "packageFiles": ["init.js"],
+      "messages": []
+    }
+  },
+  "config": {
+    "SubspaceTabsChildren": {
+      "value": {
+        "5020": [5200, 5202, 5204, 5206, 5208, 5210],
+        "5022": [5212, 5214, 5216, 5218],
+        "5024": [5220, 5222],
+        "5200": [5224, 5226, 5228, 5230, 5232, 5234, 5238],
+        "5202": [5236],
+        "0": [5020, 5022, 5024, 5026, 5028, 5030]
+      },
+      "path": false,
+      "description": "List by ids of child namespaces for each parent namespace",
+      "descriptionmsg": "subspacetabs-config-subspacetabschildren",
+      "public": true,
+      "merge_strategy": "array_plus"
+    }
+  }
+}
