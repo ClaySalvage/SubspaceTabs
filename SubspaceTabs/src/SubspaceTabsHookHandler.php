@@ -51,7 +51,8 @@ class SubspaceTabsHookHandler implements \MediaWiki\Hook\SkinTemplateNavigation_
 		if ($namespace !== 0) $tabNamespaces = array_merge($tabNamespaces, $parents);
 		// var_dump($tabNamespaces);
 		// var_dump($children[$parents[0]]);
-		$tabNamespaces = array_merge($tabNamespaces, $children[$parents[0]]);
+		$tabNamespaces = array_merge($tabNamespaces, array_diff($children[$parents[0]], [$namespace]));
+		// var_dump($tabNamespaces);
 		if (array_key_exists($namespace, $children) && $namespace !== 0)
 			$tabNamespaces = array_merge($tabNamespaces, $children[$namespace]);
 		// var_dump($tabNamespaces);
