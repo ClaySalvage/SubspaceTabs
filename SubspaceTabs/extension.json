@@ -1,7 +1,7 @@
 {
   "name": "SubspaceTabs",
   "namemsg": "subspacetabs-extensionname",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Clay Salvage",
   "url": "https://meta.wongery.org/wiki/Extension:SubspaceTabs",
   "descriptionmsg": "subspacetabs-desc",
@@ -10,6 +10,9 @@
   "manifest_version": 2,
   "requires": {
     "MediaWiki": ">= 1.38.0"
+  },
+  "MessagesDirs": {
+    "PluggableAuth": ["i18n"]
   },
   "AutoloadNamespaces": {
     "MediaWiki\\Extension\\SubspaceTabs\\": "src/"

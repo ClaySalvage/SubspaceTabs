@@ -1,0 +1,7 @@
+{
+  "@metadata": {
+    "authors": ["Clay Salvage"]
+  },
+  "subspacetabs-desc": "Implements tabs for subspaces (requires Subspace extension)",
+  "subspacetabs-extensionname": "Subspace Tabs"
+}
